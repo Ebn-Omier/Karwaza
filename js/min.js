@@ -24,7 +24,7 @@ $(function() {	'use strict';		//_Start all jQuery Items ...
 	navLinks.click(function() {
 		$(this).addClass("active").siblings().removeClass("active");
 		//_run navSlid Up function in phone screen onley.
-		if ($(window).width() < 991 ) { navSlidUp(); }
+		navSlidUp();
 	});
 
 	//_prevent the sideBar links from refresh the page.
