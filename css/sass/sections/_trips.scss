@@ -1,0 +1,96 @@
+.trips {
+  padding: 50px 0px;
+  //background: #d4daef;
+  .triptitle {
+    width: 25%;
+    float: left;
+    height: 100%;
+    padding-right: 20px;
+    background: #d9d9e0;
+    padding: 10px;
+    text-align: center;
+    @include phone {
+      width: 100%;
+    }
+    .tripsHead {
+      @extend .heading;
+    }
+    p {
+      margin: 10px 0px;
+      @extend .pargraph;
+    }
+    .myLink {
+      margin: 20px auto;
+    }
+  }
+  .tripsBox {
+    width: 75%;
+    float: left;
+    padding: 0px 0px 0px 10px;
+  //  border-left: 3px solid $bluoColor;
+    position: relative;
+    @include phone {
+      width: 100%;
+      border: none;
+      padding: 0px;
+    }
+/*
+    &:after {
+      content: "";
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      left: -15px;
+      top: 40%;
+      background: $bluoColor;
+      display: block;
+      transform: rotate(45deg);
+    }
+*/
+    .boxCont {
+      //width: $minWidth / 4;
+      //text-align: center;
+      img {
+        width: 100%;
+      }
+      p {
+        margin: 10px 0px;
+        @extend .pargraph;
+        line-height: 25px;
+      }
+      h3 {
+        padding: 0px 5px;
+        margin: 10px 0px;
+        color: $headingColor;
+        font-family: Gabriola;
+        font-size: 30px;
+      }
+    }
+    .scrollBotts {
+        @include phone {
+          width: max-content;
+          margin: auto;
+          padding-top: 20px;
+        }
+      i {
+        margin-right: 10px;
+        display: block;
+        width: 100px;
+        background: #8f8ad8;
+        text-align: center;
+        font-weight: bold;
+        padding: 5px 0px;
+        border-radius: 3px;
+        color: #fff;
+        font-size: 25px;
+        transition: .6s;
+        cursor: pointer;
+        float: left;
+        &:hover {
+          background: rgba(143, 138, 216, 0.59);
+          color: #000;
+        }
+      }
+    }
+  }
+}

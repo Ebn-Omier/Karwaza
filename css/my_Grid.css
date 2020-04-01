@@ -1,0 +1,119 @@
+/*  documentiion:
+  =================
+  = [ col-1 / col-2 / col-3 ] = the min coloms.
+*/
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none; }
+
+.row .col-3, .row .col-2, .row .col-1, .flexRow .col-5, .flexRow .col-4, .flexRow .col-3, .flexRow .col-2, .flexRow .col-1 {
+  float: left;
+  text-align: center;
+  border: 1px solid #000;
+  margin: 2px 0px;
+  background: #03A9F4;
+  color: #fff;
+  font-size: 20px; }
+
+.row {
+  width: 100%;
+  margin: 50px 0px; }
+  .row .col-3 {
+    width: 33.3333333333%; }
+    @media (max-width: 991px) {
+      .row .col-3 {
+        width: 50%; } }
+  .row .col-2 {
+    width: 50%; }
+    @media (max-width: 676px) {
+      .row .col-2 {
+        width: 100%; } }
+  .row .col-1 {
+    width: 100%; }
+
+.flexRow {
+  width: 100%;
+  margin: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .flexRow .col-5 {
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto; }
+  .flexRow .col-4 {
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto; }
+  .flexRow .col-3 {
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto; }
+  .flexRow .col-2 {
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto; }
+  .flexRow .col-1 {
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto; }
+
+.contaner {
+  margin: 0px auto; }
+  @media (max-width: 676px) {
+    .contaner {
+      width: 90%; } }
+  @media (max-width: 991px) {
+    .contaner {
+      width: 90%; } }
+  @media (min-width: 992px) {
+    .contaner {
+      width: 85%; } }
+  @media (min-width: 1200px) {
+    .contaner {
+      width: 1200px; } }
+
+.leftSide {
+  float: left;
+  width: 50%;
+  padding-right: 10px; }
+  @media (max-width: 676px) {
+    .leftSide {
+      width: 100%;
+      float: inherit;
+      padding: 0px; } }
+
+.rightSide {
+  width: 50%;
+  float: right;
+  padding-left: 10px; }
+  @media (max-width: 676px) {
+    .rightSide {
+      width: 100%;
+      float: inherit;
+      padding: 0px; } }
+
+.clearfix {
+  clear: both; }
+
+a {
+  text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px;
+  padding: 0px; }
+
+input:focus {
+  outline: none; }
+
+button:focus {
+  outline: none; }
+
+.f-left {
+  float: left; }
+
+.f-right {
+  float: right; }
+
+/*# sourceMappingURL=my_Grid.css.map */

@@ -1,0 +1,93 @@
+.cityes {
+  padding: 50px 0px;
+  .cityHead {
+    @extend .heading;
+  }
+  .cityBoxes {
+    width: 100%;
+    padding: 50px 0px;
+    //_____________
+    .bigDis {
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      top: 0px;
+      left: 0px;
+      background: rgba(0, 0, 0, 0.78);
+      z-index: 11;
+      display: none; //_______________
+      .wihtBox {
+        background: #fff;
+        padding: 10px;
+        width: 90%;
+        height: 80%;
+        margin: auto;
+        margin-top: 5%;
+        position: relative;
+        .closBox {
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          background: rgba(255, 255, 255, 0.44);
+          height: 50px;
+          width: 50px;
+          padding: 0px;
+          margin: 0px;
+          text-align: center;
+          font-size: 40px;
+          color: black;
+          cursor: pointer;
+          transition: .4s;
+          &:hover {
+            background: rgba(241, 245, 249, 0.88);
+          }
+        }
+        .img {
+          width: 100%;
+          height:80%;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .imTitle {
+          width: 100%;
+          height:20%;
+          p {
+            padding: 0px;
+            margin:5px 0px;
+          }
+        }
+      }
+    }
+    //________
+    .citImg {
+      width: $minWidth / 4 ;
+      float: left;
+      overflow: hidden;
+      animation: gallery 0.75s ease-out 0.4s forwards;
+      margin-bottom: 0;
+      position: relative;
+      border: 1px solid #FFF;
+      cursor: pointer;
+      @include phone {
+        width: $minWidth / 2 ;
+      }
+      &:hover > img {
+        -moz-transform: scale(1.075);
+				-webkit-transform: scale(1.075);
+				-ms-transform: scale(1.075);
+				transform: scale(1.075);
+      }
+      img {
+        width: 100%;
+        margin: auto;
+        vertical-align: middle;
+        transition: .5s;
+      }
+      h3, p, a {
+        display: none;
+      }
+    }
+  }
+}

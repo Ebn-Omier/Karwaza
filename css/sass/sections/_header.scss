@@ -1,0 +1,176 @@
+.header {
+  background-image: url(../img/bg.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+  .headOverlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.72);
+    .fixedNav {
+      background: #fff;
+      transition: .5s;
+      .menu {
+        background: #c1bdde;
+      }
+    }
+    .topNav {
+      position: fixed;
+      width: 100%;
+      transition: .5s;
+      z-index: 9;
+      .logo {
+        float: left;
+        margin: 0px;
+        font-family: Brush Script Std;
+        color: #c1bdde;
+        font-size: 35px;
+      }
+      .menu {
+        float: right;
+        font-size: 25px;
+        padding: 5px 15px;
+        //background: #796254;
+        color: #fff;
+        cursor: pointer;
+        margin: 5px 0px;
+        border-radius: 5px;
+      }
+    }
+    .navLinks {
+      position: fixed;
+      background: #060608;
+      height: 0%;
+      width: 0%;
+      top: 0px;
+      right: 0px;
+      opacity: 0;
+      overflow: hidden;
+      z-index: 10;
+      //transition: 1.5s;
+      //display: none;
+      .clossmenu {
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        color: #fff;
+        font-size: 40px;
+        margin: 0px;
+        padding: 0px 10px;
+        cursor: pointer;
+        font-family: cursive;
+        &:hover {
+          background: rgba(189, 195, 199, 0.2);
+        }
+      }
+      ul {
+        list-style-type: none;
+        margin: 0px ;
+        padding: 30px 0px 0px 50px;
+        li {
+          a {
+            text-decoration: none;
+            width: max-content;
+            color: #fff;
+            display: block;
+            font-size: 40px;
+            padding: 5px 0px;
+            font-family: MV Boli;
+            font-weight: bold;
+            transition: .3s;
+            @include phone {
+              font-size: 30px;
+              padding: 10px 0px;
+            }
+          }
+        }
+        li a:hover {
+          color: #76847f;
+        }
+        .active a {
+          font-size: 60px;
+          color: #76847f;
+          @include phone {
+            font-size: 50px;
+            padding: 10px 0px;
+          }
+          @include larg-screen {
+            padding-left: 50px;
+          }
+        }
+      }
+    }
+    .mintitle {
+      padding-top: 150px;
+      .titleBox {
+        display: none;
+        @include  phone {
+          text-align: center;
+        }
+        .withB {
+          &::before {
+            content: "for the adcvengrus sole";
+            position: absolute;
+            left: 5px;
+            top: -10px;
+            color: #c1bdde;
+            font-size: 21px;
+            @include  phone {
+              font-size: 18px;
+              left: 0px;
+              top: -17px;
+            }
+          }
+        }
+        .title {
+          color: #fff;
+          margin: 0px;
+          font-size: 100px;
+          font-family: cursive;
+          position: relative;
+          @include  phone {
+            font-size: 55px;
+          }
+        }
+        .disciption {
+          color: rgba(255, 255, 255, 0.84);
+          font-family: $textFontFamily;
+          font-size: 29px;
+          width: 80%;
+          @include  phone {
+            font-size: 25px;
+            width: 100%;
+          }
+        }
+      }
+      .active {
+        display: block;
+      }
+      .buttons {
+        width: 240px;
+        margin: 50px auto 0px auto;
+        i {
+          display: block;
+          width: 100px;
+          padding: 10px 0px;
+          font-size: 40px;
+          color: #fff;
+          float: left;
+          background: rgba(0, 0, 0, 0.34);
+          margin: 0px 10px;
+          text-align: center;
+          font-weight: bold;
+          cursor: pointer;
+        }
+        .fa-angle-left {float: left;}
+        .fa-angle-right {float: right;;}
+      }
+    }//
+  }
+}

@@ -1,0 +1,32 @@
+.plans {
+  padding: 50px 0px;
+  .plansiction {
+    padding: 20px 0px;
+    .planimg {
+      width: 40%;
+      @include phone {
+        width: 100%;
+      }
+      img {
+        width: 80%;
+        margin: auto;
+        border-radius: 50%;
+        display: block;
+      }
+    }
+    .planDis {
+      width: 60%;
+      @include phone {
+        width: 100%;
+        text-align: center;
+      }
+      @include larg-screen {
+        padding-top: 50px;
+      }
+      p {
+        @extend .pargraph;
+
+      }
+    }
+  }
+}

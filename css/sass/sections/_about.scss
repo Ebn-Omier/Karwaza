@@ -1,0 +1,47 @@
+.about {
+  padding: 70px 0px;
+  .leftSide {
+    h2 {
+      @extend .heading;
+    }
+    p {
+      @extend .pargraph;
+      margin: 0px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 20px;
+      li {
+        @extend .pargraph;
+        cursor: pointer;
+        @include tablet {
+          margin: 5px 0px;
+        }
+        i {
+          margin-right: 10px;
+          font-size: 12px;
+          background: $bluoColor;
+          padding: 3px;
+          color: #fff;
+        }
+        .ansur {
+          margin: 5px 0px;
+          color: #81868a;
+          font-weight: normal;
+          display: none;
+          width: 80%;
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+  .rightSide {
+    p {
+      margin: 0px;
+      @extend .pargraph;
+      b {
+        color: $bluoColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+
+/*  documentiion:
+  =================
+  = [ col-1 / col-2 / col-3 ] = the min coloms.
+*/
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+}
+
+//_media Query
+  @mixin phone {  //_phone screen
+    @media (max-width: 676px) {  @content;  }
+  }
+  @mixin tablet {  //_tablet and larg phone
+    @media (max-width: 991px) {  @content;  }
+  }
+  @mixin small-screen {  //_labtop and small screen
+    @media (min-width: 992px) {  @content;  }
+  }
+  @mixin larg-screen {  //_larg screen and big divies
+    @media (min-width: 1200px) {  @content;  }
+  }
+//_media Query
+
+%colAll{  //_well be included in all cols.
+  float: left;
+  text-align: center;
+  border: 1px solid #000;
+  margin: 2px 0px;
+  background: #03A9F4;
+  color: #fff;
+  font-size: 20px;
+}
+$minWidth : 100%;  //_the min size = { 100 % 100 }
+.row {
+  width: 100%;
+  margin: 50px 0px;
+  .col-4 {
+    @extend %colAll;
+    width: $minWidth / 4 ;
+    @include tablet {  width: 50%; }
+  }
+  .col-3 {
+    @extend %colAll;
+    width: $minWidth / 3 ;
+    @include tablet {  width: 50%; }
+  }
+  .col-2 {
+    @extend %colAll;
+    width: $minWidth / 2 ;
+    @include phone {  width: 100%; };
+  }
+  .col-1 {
+    @extend %colAll;
+    width: $minWidth;
+  }
+}
+
+.flexRow {
+  width: 100%;
+  margin: 10px 0px;
+  display: flex;
+  .col-5 {
+    @extend %colAll;
+    flex: auto;
+  }
+  .col-4 {
+    @extend %colAll;
+    flex: auto;
+  }
+  .col-3 {
+    @extend %colAll;
+    flex: auto;
+  }
+  .col-2 {
+    @extend %colAll;
+    flex: auto;
+  }
+  .col-1 {
+    @extend %colAll;
+    flex: auto;
+  }
+}
+//===================== Global style.
+  .contaner {
+    margin: 0px auto;
+    @include phone          {  width: 90%; };
+    @include tablet         {  width: 90%; };
+    @include small-screen   {  width: 85%; };
+    @include larg-screen    {  width: 1200px; };
+  }
+  .leftSide { //_
+    float: left;
+    width: 50%;
+    padding-right: 10px;
+    @include phone {
+      width: 100%;
+      float: inherit;
+      padding: 0px;
+    }
+  }
+  .rightSide { //_
+    width: 50%;
+    float: right;
+    padding-left: 10px;
+    @include phone {
+      width: 100%;
+      float: inherit;
+      padding: 0px;
+    }
+  }
+  .clearfix { // well drop after the floated items to fix the float.
+    clear: both;  }
+  a {
+  	text-decoration:none;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+    padding: 0px;
+  }
+  input:focus {
+    outline: none
+  }
+  button:focus {
+    outline: none
+  }
+//===================== Global style
+
+.f-left  {  float: left; }  //_float left.
+.f-right {  float: right; } //_float right.
